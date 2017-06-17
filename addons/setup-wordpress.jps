@@ -3,9 +3,9 @@
     "name": "WordPress setup addon",
     "description": "This package for WowrdPress configurations",
     "globals": {
-        "SERVER_WEBROOT": "/var/www/webroot/ROOT",
+        "SERVER_WEBROOT": "/usr/local/lsws/wordpress",
         "ADMIN_PASSWD": "${settings.admin_passwd}",
-        "CONFIG_FILE" : "/var/www/webroot/ROOT/wp-config.php",
+        "CONFIG_FILE" : "/usr/local/lsws/wordpress/wp-config.php",
         "WP_TITLE": "${settings.wp_title}",
         "DB_HOST": "${settings.db_host}",
         "DB_NAME": "wordpress",
