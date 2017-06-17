@@ -3,14 +3,14 @@
     "name": "WordPress plugins addon",
     "description": "This addon for plugins install",
     "globals": {
-        "SERVER_WEBROOT": "/var/www/webroot/ROOT",
+        "SERVER_WEBROOT": "/usr/local/lsws/wordpress",
         "PLUGINS_LIST": "${settings.plugins_list}"
         
     },
     "onInstall": {
         "cmd[${nodes.cp[0].id}]": [
             "wget ${globals.PLUGINS_LIST} -O /tmp/plugins",
-            "while read plugin; do wp --allow-root plugin install $plugin --activate --path=/var/www/webroot/ROOT; done < /tmp/plugins"
+            "while read plugin; do wp --allow-root plugin install $plugin --activate --path=/usr/local/lsws/wordpress; done < /tmp/plugins"
         ]
     }
 }
